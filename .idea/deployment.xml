@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="icmdb">
+    <serverData>
+      <paths name="icmdb">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/icmdb" local="$PROJECT_DIR$" web="/cmdb" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
