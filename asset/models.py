@@ -102,7 +102,7 @@ class AssetInfo(models.Model):
     #branch = models.CharField(max_length=128, choices=BRANCH_CHOICES, verbose_name='业务线')
 
 
-    project = models.ForeignKey(verbose_name='资产项目', to='AssetProject', related_name='asset', on_delete=models.CASCADE,)
+    project = models.ForeignKey(verbose_name='资产属性', to='AssetProject', related_name='asset', on_delete=models.CASCADE,)
     business = models.ForeignKey(verbose_name='资产业务', to='AssetBusiness', related_name='asset_business',on_delete=models.SET_NULL, null=True, blank=True)
     user = models.ForeignKey(verbose_name="登录用户", to='AssetLoginUser', related_name='user_name',
                              on_delete=models.SET_NULL, null=True, blank=True)
