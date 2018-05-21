@@ -126,10 +126,11 @@
                                         <th>主机名</th>
                                         <th>外网IP</th>
                                         <th>内网IP</th>
-                                        <th>平台</th>
-                                        <th>项目</th>
-                                        <th>业务</th>
-                                        <th>激活</th>
+                                        <th>资产类型</th>
+                                        <th>区域</th>
+                                        <th>归属</th>
+                                        <th>业务线</th>
+                                        <th>状态</th>
                                         <th>动作</th>
                                     </tr>
                                     </thead>
@@ -143,12 +144,23 @@
                                             </td>
                                             <td class="center">{{ row.network_ip }}</td>
                                             <td class="center">{{ row.inner_ip }}</td>
-                                            <td class="center">{{ row.platform }} | {{ row.region }}</td>
+                                            <td class="center">{{ row.platform }}</td>
+                                            <td class="center">{{ row.region }}</td>
                                             <td class="center"><div class="label label-primary">{{ row.project }}</div></td>
-                                         <td class="center"><div class="label label-success">{{ row.business }}</div></td>
-                                            <td class="center"><b>{% ifequal  row.is_active  True %}   <i class="fa fa-check text-navy"></i>{% endifequal %}
-                                             {% ifequal   row.is_active  False  %}   <i class="fa fa-times text-danger"></i> {% endifequal %} </b>
-                                            </td>
+                                            <td class="center"><div class="label label-warning">{{ row.branch }}</div></td>
+
+                                            {% if row.is_active == "在线" %}
+                                                <td class="center"><div class="label label-primary">{{ row.is_active }}</div></td>
+                                            {% elif row.is_active == "下线" %}
+                                                <td class="center"><div class="label label-warning">{{ row.is_active }}</div></td>
+                                            {% elif row.is_active == "未知" %}
+                                                <td class="center"><div class="label label-default">{{ row.is_active }}</div></td>
+                                            {% elif row.is_active == "备用" %}
+                                                <td class="center"><div class="label label-info">{{ row.is_active }}</div></td>
+                                            {% elif row.is_active == "故障" %}
+                                                <td class="center"><div class="label label-danger">{{ row.is_active }}</div></td>
+                                            {% endif %}
+
                                             <td><a class="btn btn-primary  btn-xs "
                                                    href="{% url  "asset:asset_update"  pk=row.id %}">编辑</a>
                                                 <a class="btn btn-danger  btn-xs  asset_del">删除</a>
