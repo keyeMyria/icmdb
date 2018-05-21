@@ -73,11 +73,11 @@ class AssetInfo(models.Model):
         ("香港", '香港'),
         ("其他", '其他')
     )
-    BRANCH_CHOICES = (
-        ("001业务线","001业务线"),
-        ("003业务线","002业务线"),
-        ("004业务线","004业务线")
-    )
+    # BRANCH_CHOICES = (
+    #     ("001业务线","001业务线"),
+    #     ("003业务线","002业务线"),
+    #     ("004业务线","004业务线")
+    # )
     STATUS_CHOICES = (
         ('在线', '在线'),
         ('下线', '下线'),
@@ -99,7 +99,7 @@ class AssetInfo(models.Model):
     bandwidth = models.IntegerField(verbose_name='外网带宽', null=True, blank=True, default="1")
     platform = models.CharField(max_length=128, choices=PLATFORM_CHOICES, verbose_name='平台')
     region = models.CharField(max_length=128, choices=REGION_CHOICES, verbose_name='区域')
-    branch = models.CharField(max_length=128, choices=BRANCH_CHOICES, verbose_name='业务线')
+    #branch = models.CharField(max_length=128, choices=BRANCH_CHOICES, verbose_name='业务线')
 
 
     project = models.ForeignKey(verbose_name='资产项目', to='AssetProject', related_name='asset', on_delete=models.CASCADE,)

@@ -479,7 +479,7 @@ def AssetZtree(request):
         if hasperm:
             manager.append(i)
 
-    data = [{"id": "0", "pId": "0", "name": "项目"}, ]
+    data = [{"id": "0", "pId": "0", "name": "资产属性"}, ]
     for i in manager:
         project_id = AssetProject.objects.get(projects=i['projects']).id
         data.append({"id": "000{0}".format(project_id), "n": i['projects'], "pId": "0",
