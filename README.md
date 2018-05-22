@@ -3,10 +3,6 @@
 
 linux 云主机 管理系统,包含 CMDB系统,webssh登录、命令执行、异步执行shell/python/yml、查看日志、定时任务等功能。
 
-* 交流群号： 620176501  <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=bbe5716e8bd2075cb27029bd5dd97e22fc4d83c0f61291f47ed3ed6a4195b024"><img border="0" src="https://github.com/hequan2017/cmdb/blob/master/static/img/group.png"  alt="django开发讨论群" title="django开发讨论群"></a>
-
----
-### DEMO
 
 ```bash
 http://39.104.174.116:8001
@@ -64,10 +60,10 @@ http://39.104.174.116:8001
   * Python 3.6.5
   
 运行环境：
-  * 阿里云  Centos 7.5
+  *   Centos 7.5
 
 数据库：
-  * 目前开发阶段 用的 sqlite3,可无缝切换为 mysql
+  * 目前开发阶段 mysql
 
 
 ###  部署
@@ -169,7 +165,4 @@ docker  exec  -it   chain /bin/bash
 ![DEMO](static/demo/4.png)
 
 ---
-### 作者
 
-#### 0.2
-- 何全
