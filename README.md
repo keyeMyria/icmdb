@@ -1,20 +1,10 @@
-## Chain
-![DEMO](static/demo/LOGO.png)
+
 
 linux 云主机 管理系统,包含 CMDB系统,webssh登录、命令执行、异步执行shell/python/yml、查看日志、定时任务等功能。
 
 
-```bash
-http://39.104.174.116:8001
-
-账号  admin
-密码  1qaz.2wsx
-
-```
-
 ### 目录结构
 
-![DEMO](static/demo/项目.png)
   *  asset     资产
         * api   asset/api/asset.html
   *  chain      主配置目录
@@ -30,23 +20,6 @@ http://39.104.174.116:8001
 ###  权限
 
 关于权限,采用的为 django-guardian  对象权限  和 django自带auth权限 相结合
-
-
-举个例子:
-  * 新建一个资产项目  [运维]  新建一个资产 [web01]  和 资产用户 [web01-root] 分配到 [运维] 项目下
-  
-  * 新建一个用户  [hequan]  , 将 [hequan] 分配到用户组  [ops].
-  
-  * 系统用户--组对象权限 |  添加  对象类型:[资产项目]  资产项目:[运维]  组:[ops]  权限:[asset | 资产项目 | 只读资产项目]
-  * [ hequan ]  获得  [web01] [web01-root]  [运维]  可读权限
-  
-  * 小权限分5类:  [可读   添加（没用到）  修改   删除    执行（后面用来执行cmd 和工具）]
-  
-  * [admin]  默认有所有权限
-  
-  * 如果想让 [hequan] 有添加资产权限,  选择  系统用户 -- 用户或者组   选择  Can  add  资产管理
-  
-  * 普通用户 无权限 管理系统用户 和 登录后台
 
 
 ###  环境
