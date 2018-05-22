@@ -47,10 +47,6 @@ git clone https://github.com/hequan2017/chain.git
 ```
 
 修改 chain/settings.py
-```bash
-web_ssh = "39.104.174.116"    ##修改为本机外网IP
-web_port = 8002
-```
 
 ```bash
 mkdir /etc/ansible/
